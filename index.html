@@ -1,0 +1,202 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .color1 { color: red; }
+  .color2 { color: blue; }
+  .color3 { color: green; }
+  .color4 { color: purple; }
+  .color5 { color:brown; }
+  .color6 { color: yellow; }
+  .color7 { color: white; }
+  .color8 { color: darkturquoise; }
+  .color9 { color: darkslateblue; }
+    </style>
+</head>
+<body>
+
+  <div id="heading">
+  <div id="frame">
+  <div id="mainpage">
+    <div id="cname">
+        <!-- <img id="logo" src="./images/logo.jpeg"/>   -->
+    <img id="mainh" src="./jpg9.jpg" width="100"height="100"> 
+  </div>
+ 
+  <div id="g">
+  <h1 id="changingText">WELCOME</h1> 
+  <h1 id="changingTextb">TO THE</h1> 
+  
+  <h1 id="changingTextc">V-A-S ENGLISH MEDIUM HIGH SCHOOL</h1> 
+
+
+</div>
+
+</div>
+</div>
+<div class="slider">
+    <div class="slider-container">
+        
+        <div class="slide"><img class="dgms" src="./jpg1.jpg" alt="Image 2"></div>
+        <div class="slide"><img class="dgms" src="./jpg2.jpg" alt="Image 3"></div>
+        <div class="slide"><img class="dgms" src="./jpg3.jpg" alt="Image 1"></div>
+        <div class="slide"><img class="dgms" src="./jpg4.jpg" alt="Image 2"></div>
+        <div class="slide"><img class="dgms" src="./jpg5.jpg" alt="Image 3"></div>
+        <div class="slide"><img class="dgms" src="./jpg6.jpg" alt="Image 3"></div>
+        <div class="slide"><img class="dgms" src="./jpg7.jpg" alt="Image 3"></div>
+        <!-- Add more slides as needed -->
+    </div>
+  </div> 
+  
+<h1>College Contact  Numbers</h1>
+          <div id="scrolling">
+            <p id="changingTextd">Name:B.KONDAPANAIDU(CHINNA) (Director&Correspondent)  <a href="tel:+919390385008">91 93903 85008 </a></p>
+            <p>Name:SK.YASIN BHASHA(PRINCIPAL) <a href="tel:+91 9492924374">91 94929 24374 </a></p>
+         </div> 
+         <div id="boder">
+ 
+            <h1 id="color"><marquee>Need Your Support To school Success</marquee></h1>
+          <h3>Thanks To Everyone </h3>
+          <div>
+          <img id="maincop" src="./jpg8.jpg">
+          </div>
+          
+                    <div>
+                     
+                        <h2 id="changingTexte"> V-A-S ENGLISH MEDIUM HIGH SCHOOL (Kavali) ,(GAYATRI NAGAR)</h2>  
+                        
+                        <a href="https://maps.app.goo.gl/hTV24mPLg3yub9io6"><h2>Map <img id="map" src="./map logo3.jpeg"></h2></a>
+                        
+                      </div>
+                         
+          </div>
+          
+</div> 
+
+<div class="content">
+    <!-- <h1>Auto Background Color Change</h1>
+    <p>This is a demonstration of automatic background color change.</p> -->
+</div>
+<audio id="bgMusic" loop>
+    <source src="./audio/winning-elevation-111355.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <button onclick="playPause()">Play/Pause</button>
+  <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="1" onchange="adjustVolume(this.value)">
+  
+  <script>
+  var bgMusic = document.getElementById("bgMusic");
+  
+  function playPause() {
+    if (bgMusic.paused) {
+      bgMusic.play();
+    } else {
+      bgMusic.pause();
+    }
+  }
+  
+  function adjustVolume(volume) {
+    bgMusic.volume = volume;
+  }
+  </script>
+
+<script>
+  const sliderContainer = document.querySelector('.slider-container');
+  let slideIndex = 0;
+
+  function nextSlide() {
+      slideIndex++;
+      if (slideIndex === sliderContainer.children.length) {
+          slideIndex = 0;
+      }
+      updateSlider();
+  }
+
+  function updateSlider() {
+      const slideWidth = sliderContainer.clientWidth;
+      sliderContainer.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  }
+
+  setInterval(nextSlide, 2000); // Change slide every 2 seconds
+</script>
+<script>
+    function changeBackgroundColor() {
+        const colors = ['#ff5733', '#33ff57', '#5733ff', '#ff5733','#33ff56','#00ffff','#7fff00','#5f9ea0','#deb887','#8a2be2','#d2691e']; // Define your colors here
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    }
+
+    // Change background color every 5 seconds
+    setInterval(changeBackgroundColor, 5000);
+</script>
+<script>
+  // JavaScript code to change text color automatically
+  document.addEventListener("DOMContentLoaded", function() {
+    var textElement = document.getElementById("changingText");
+    var colors = ["color1", "color2", "color3"]; // Define the color classes
+    var currentIndex = 0; // Initialize index to 0
+    
+    setInterval(function() {
+      textElement.className = colors[currentIndex]; // Apply current color class
+      currentIndex = (currentIndex + 1) % colors.length; // Move to next color
+    }, 1000); // Change color every 1000 milliseconds (1 second)
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    var textElement = document.getElementById("changingTextb");
+    var colors = ["color7", "color8", "color9"]; // Define the color classes
+    var currentIndex = 0; // Initialize index to 0
+    
+    setInterval(function() {
+      textElement.className = colors[currentIndex]; // Apply current color class
+      currentIndex = (currentIndex + 1) % colors.length; // Move to next color
+    }, 1000); // Change color every 1000 milliseconds (1 second)
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    var textElement = document.getElementById("changingTextc");
+    var colors = ["color4", "color5", "color6"]; // Define the color classes
+    var currentIndex = 0; // Initialize index to 0
+    
+    setInterval(function() {
+      textElement.className = colors[currentIndex]; // Apply current color class
+      currentIndex = (currentIndex + 1) % colors.length; // Move to next color
+    }, 1000); // Change color every 1000 milliseconds (1 second)
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    var textElement = document.getElementById("changingTextd");
+    var colors = ["color7", "color8", "color9"]; // Define the color classes
+    var currentIndex = 0; // Initialize index to 0
+    
+    setInterval(function() {
+      textElement.className = colors[currentIndex]; // Apply current color class
+      currentIndex = (currentIndex + 1) % colors.length; // Move to next color
+    }, 1000); // Change color every 1000 milliseconds (1 second)
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    var textElement = document.getElementById("changingTexte");
+    var colors = ["color4", "color5", "color6"]; // Define the color classes
+    var currentIndex = 0; // Initialize index to 0
+    
+    setInterval(function() {
+      textElement.className = colors[currentIndex]; // Apply current color class
+      currentIndex = (currentIndex + 1) % colors.length; // Move to next color
+    }, 1000); // Change color every 1000 milliseconds (1 second)
+  });
+  </script>
+  
+</body>
+</html>
